@@ -78,26 +78,60 @@
         </button>
     </div>
 
-    <nav class="flex-1 py-4">
+    <nav class="flex-1 py-4 overflow-y-auto custom-scrollbar">
         <ul class="space-y-1">
             <li>
                 <button onclick="switchTab('dashboard')" id="nav-dashboard" class="tab-btn w-full flex items-center gap-3 px-6 py-3 text-left text-slate-600 hover:bg-slate-50 transition-colors active">
                     <i data-lucide="layout-dashboard" class="w-5 h-5"></i> Dashboard
                 </button>
             </li>
+
+            <!-- Syllabus Trackers Dropdown -->
             <li>
-                <button onclick="switchTab('biology')" id="nav-biology" class="tab-btn w-full flex items-center gap-3 px-6 py-3 text-left text-slate-600 hover:bg-slate-50 transition-colors">
-                    <i data-lucide="microscope" class="w-5 h-5"></i> Biology
+                <button onclick="toggleNavGroup('group-trackers')" class="w-full flex items-center justify-between px-6 py-3 text-left text-slate-600 hover:bg-slate-50 transition-colors">
+                    <div class="flex items-center gap-3"><i data-lucide="list-todo" class="w-5 h-5"></i> Syllabus Trackers</div>
+                    <i data-lucide="chevron-down" id="icon-group-trackers" class="w-4 h-4 transition-transform duration-200"></i>
                 </button>
+                <ul id="group-trackers" class="hidden bg-slate-50/50 py-1 border-y border-slate-100">
+                    <li>
+                        <button onclick="switchTab('tracker-biology')" id="nav-tracker-biology" class="tab-btn w-full flex items-center gap-3 pl-14 pr-6 py-2.5 text-sm text-left text-slate-600 hover:bg-slate-100 transition-colors">
+                            <i data-lucide="microscope" class="w-4 h-4 text-green-500"></i> Biology
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="switchTab('tracker-chemistry')" id="nav-tracker-chemistry" class="tab-btn w-full flex items-center gap-3 pl-14 pr-6 py-2.5 text-sm text-left text-slate-600 hover:bg-slate-100 transition-colors">
+                            <i data-lucide="flask-conical" class="w-4 h-4 text-blue-500"></i> Chemistry
+                        </button>
+                    </li>
+                </ul>
             </li>
+
+            <!-- Study Materials Dropdown -->
             <li>
-                <button onclick="switchTab('chemistry')" id="nav-chemistry" class="tab-btn w-full flex items-center gap-3 px-6 py-3 text-left text-slate-600 hover:bg-slate-50 transition-colors">
-                    <i data-lucide="flask-conical" class="w-5 h-5"></i> Chemistry
+                <button onclick="toggleNavGroup('group-materials')" class="w-full flex items-center justify-between px-6 py-3 text-left text-slate-600 hover:bg-slate-50 transition-colors">
+                    <div class="flex items-center gap-3"><i data-lucide="book-open" class="w-5 h-5"></i> Study Materials</div>
+                    <i data-lucide="chevron-down" id="icon-group-materials" class="w-4 h-4 transition-transform duration-200"></i>
                 </button>
+                <ul id="group-materials" class="hidden bg-slate-50/50 py-1 border-y border-slate-100">
+                    <li>
+                        <button onclick="switchTab('materials-biology')" id="nav-materials-biology" class="tab-btn w-full flex items-center gap-3 pl-14 pr-6 py-2.5 text-sm text-left text-slate-600 hover:bg-slate-100 transition-colors">
+                            <i data-lucide="microscope" class="w-4 h-4 text-green-500"></i> Biology
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="switchTab('materials-chemistry')" id="nav-materials-chemistry" class="tab-btn w-full flex items-center gap-3 pl-14 pr-6 py-2.5 text-sm text-left text-slate-600 hover:bg-slate-100 transition-colors">
+                            <i data-lucide="flask-conical" class="w-4 h-4 text-blue-500"></i> Chemistry
+                        </button>
+                    </li>
+                </ul>
             </li>
+
             <li>
-                <button onclick="switchTab('materials')" id="nav-materials" class="tab-btn w-full flex items-center gap-3 px-6 py-3 text-left text-slate-600 hover:bg-slate-50 transition-colors">
-                    <i data-lucide="book-open" class="w-5 h-5"></i> Study Materials
+                <button onclick="switchTab('mocktests')" id="nav-mocktests" class="tab-btn w-full flex items-center justify-between px-6 py-3 text-left text-slate-500 hover:bg-slate-50 transition-colors">
+                    <span class="flex items-center gap-3"><i data-lucide="file-check" class="w-5 h-5"></i> Mock Tests</span>
+                    <div class="flex items-center gap-1 bg-slate-100 text-slate-500 px-2 py-0.5 rounded text-[10px] font-bold border border-slate-200">
+                        <i data-lucide="lock" class="w-3 h-3"></i> <span id="sidebar-timer-text">14d</span>
+                    </div>
                 </button>
             </li>
         </ul>
@@ -135,39 +169,9 @@
 
 <script>
     /* =======================================================================
-       YOUR EDITABLE CONFIGURATION SECTION
-       Add links to PDFs, notes, or YouTube videos in the "links" object below.
-       Leave empty string '' if no link is available.
+       The links are now fetched automatically from the 'links.json' file.
        ======================================================================= */
-    const RESOURCE_LINKS = {
-        biology: {
-            1: { lecture: '', detailed_lecture: '', notes: '', ncert_exercise: '', practice_questions: '', master_pdf: '' },
-            2: { lecture: '', detailed_lecture: '', notes: '', ncert_exercise: '', practice_questions: '', master_pdf: '' },
-            3: { lecture: '', detailed_lecture: '', notes: '', ncert_exercise: '', practice_questions: '', master_pdf: '' },
-            4: { lecture: '', detailed_lecture: '', notes: '', ncert_exercise: '', practice_questions: '', master_pdf: '' },
-            5: { lecture: '', detailed_lecture: '', notes: '', ncert_exercise: '', practice_questions: '', master_pdf: '' },
-            6: { lecture: '', detailed_lecture: '', notes: '', ncert_exercise: '', practice_questions: '', master_pdf: '' },
-            7: { lecture: '', detailed_lecture: '', notes: '', ncert_exercise: '', practice_questions: '', master_pdf: '' },
-            8: { lecture: '', detailed_lecture: '', notes: '', ncert_exercise: '', practice_questions: '', master_pdf: '' },
-            9: { lecture: '', detailed_lecture: '', notes: '', ncert_exercise: '', practice_questions: '', master_pdf: '' },
-            10: { lecture: '', detailed_lecture: '', notes: '', ncert_exercise: '', practice_questions: '', master_pdf: '' },
-            11: { lecture: '', detailed_lecture: '', notes: '', ncert_exercise: '', practice_questions: '', master_pdf: '' },
-            12: { lecture: '', detailed_lecture: '', notes: '', ncert_exercise: '', practice_questions: '', master_pdf: '' },
-            13: { lecture: '', detailed_lecture: '', notes: '', ncert_exercise: '', practice_questions: '', master_pdf: '' }
-        },
-        chemistry: {
-            1: { lecture: '', detailed_lecture: '', notes: '', ncert_exercise: '', practice_questions: '', master_pdf: '' },
-            2: { lecture: '', detailed_lecture: '', notes: '', ncert_exercise: '', practice_questions: '', master_pdf: '' },
-            3: { lecture: '', detailed_lecture: '', notes: '', ncert_exercise: '', practice_questions: '', master_pdf: '' },
-            4: { lecture: '', detailed_lecture: '', notes: '', ncert_exercise: '', practice_questions: '', master_pdf: '' },
-            5: { lecture: '', detailed_lecture: '', notes: '', ncert_exercise: '', practice_questions: '', master_pdf: '' },
-            6: { lecture: '', detailed_lecture: '', notes: '', ncert_exercise: '', practice_questions: '', master_pdf: '' },
-            7: { lecture: '', detailed_lecture: '', notes: '', ncert_exercise: '', practice_questions: '', master_pdf: '' },
-            8: { lecture: '', detailed_lecture: '', notes: '', ncert_exercise: '', practice_questions: '', master_pdf: '' },
-            9: { lecture: '', detailed_lecture: '', notes: '', ncert_exercise: '', practice_questions: '', master_pdf: '' },
-            10: { lecture: '', detailed_lecture: '', notes: '', ncert_exercise: '', practice_questions: '', master_pdf: '' }
-        }
-    };
+    let RESOURCE_LINKS = {};
 
     /* =======================================================================
        SYSTEM DATA (Do not modify unless Syllabus/Marks change)
@@ -212,27 +216,51 @@
         { id: 'rev2', label: 'Revision 2', icon: 'check-circle' }
     ];
 
+    // Mappings to sync Study Materials with Progress Tracker
+    const taskToResourceMap = { lec: 'lecture', det_lec: 'detailed_lecture', ncert: 'ncert_exercise', prac: 'practice_questions', notes: 'notes' };
+    const resourceToTaskMap = { lecture: 'lec', detailed_lecture: 'det_lec', ncert_exercise: 'ncert', practice_questions: 'prac', notes: 'notes' };
+
     /* =======================================================================
        APP STATE & LOGIC
        ======================================================================= */
     let currentTab = 'dashboard';
 
-    // Initialize or load state from localStorage
-    let userProgress = JSON.parse(localStorage.getItem('study_tracker_data'));
-    if (!userProgress) {
-        userProgress = { biology: {}, chemistry: {} };
-        // Setup empty structure
-        ['biology', 'chemistry'].forEach(sub => {
-            syllabus[sub].forEach(ch => {
-                userProgress[sub][ch.id] = {};
-                tasks.forEach(t => userProgress[sub][ch.id][t.id] = false);
+    // Initialize or load state from localStorage safely to prevent losing progress
+    let savedProgress = JSON.parse(localStorage.getItem('study_tracker_data'));
+    let userProgress = savedProgress || { biology: {}, chemistry: {} };
+
+    // Safely setup structure (This ensures updating the HTML never wipes her existing progress)
+    ['biology', 'chemistry'].forEach(sub => {
+        if (!userProgress[sub]) userProgress[sub] = {};
+        syllabus[sub].forEach(ch => {
+            if (!userProgress[sub][ch.id]) userProgress[sub][ch.id] = {};
+            tasks.forEach(t => {
+                if (userProgress[sub][ch.id][t.id] === undefined) {
+                    userProgress[sub][ch.id][t.id] = false; // Add missing tasks without overwriting
+                }
             });
+            // Ensure materials object exists to store individual link ticks
+            if (!userProgress[sub][ch.id].materials) {
+                userProgress[sub][ch.id].materials = {};
+            }
         });
-        saveProgress();
-    }
+    });
+    saveProgress();
 
     function saveProgress() {
         localStorage.setItem('study_tracker_data', JSON.stringify(userProgress));
+    }
+
+    function toggleNavGroup(groupId) {
+        const group = document.getElementById(groupId);
+        const icon = document.getElementById(`icon-${groupId}`);
+        if (group.classList.contains('hidden')) {
+            group.classList.remove('hidden');
+            icon.classList.add('rotate-180');
+        } else {
+            group.classList.add('hidden');
+            icon.classList.remove('rotate-180');
+        }
     }
 
     function calculateMarks(subject) {
@@ -246,10 +274,12 @@
                     completedTasks++;
                 }
             });
-            // Proportionate marks based on completed tasks for this chapter
-            earned += (completedTasks / tasks.length) * ch.marks;
+            // Only add marks if all tasks for the chapter are completed
+            if (completedTasks === tasks.length) {
+                earned += ch.marks;
+            }
         });
-        return { earned: Math.round(earned), total };
+        return { earned, total };
     }
 
     /* =======================================================================
@@ -273,7 +303,17 @@
 
         // Update nav styling
         document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-        document.getElementById(`nav-${tab}`).classList.add('active');
+        const activeBtn = document.getElementById(`nav-${tab}`);
+        if(activeBtn) activeBtn.classList.add('active');
+
+        // Auto-open the parent dropdown menu if accessing a sub-page via Dashboard cards
+        if (tab.startsWith('tracker-')) {
+            document.getElementById('group-trackers').classList.remove('hidden');
+            document.getElementById('icon-group-trackers').classList.add('rotate-180');
+        } else if (tab.startsWith('materials-')) {
+            document.getElementById('group-materials').classList.remove('hidden');
+            document.getElementById('icon-group-materials').classList.add('rotate-180');
+        }
 
         // Close sidebar on mobile after clicking tab
         if(window.innerWidth < 1024) { toggleSidebar(); }
@@ -282,9 +322,52 @@
     }
 
     function toggleTask(subject, chapterId, taskId) {
-        userProgress[subject][chapterId][taskId] = !userProgress[subject][chapterId][taskId];
+        let chProgress = userProgress[subject][chapterId];
+        chProgress[taskId] = !chProgress[taskId];
+
+        // Automatically sync corresponding materials when main task is toggled
+        const resourceKey = taskToResourceMap[taskId];
+        if (resourceKey) {
+            const links = (RESOURCE_LINKS[subject] && RESOURCE_LINKS[subject][chapterId]) ? RESOURCE_LINKS[subject][chapterId] : {};
+            const data = links[resourceKey];
+
+            if (data && data !== "" && (!Array.isArray(data) || data.length > 0)) {
+                const totalItems = Array.isArray(data) ? data.length : 1;
+                if (!chProgress.materials[resourceKey]) chProgress.materials[resourceKey] = [];
+                for(let i = 0; i < totalItems; i++) {
+                    chProgress.materials[resourceKey][i] = chProgress[taskId];
+                }
+            }
+        }
+
         saveProgress();
         renderContent(); // Re-render to update UI (progress bars, etc)
+    }
+
+    function toggleMaterial(subject, chapterId, resourceKey, index, totalItems) {
+        let chProgress = userProgress[subject][chapterId];
+        if (!chProgress.materials[resourceKey]) chProgress.materials[resourceKey] = [];
+
+        // Toggle specific material
+        chProgress.materials[resourceKey][index] = !chProgress.materials[resourceKey][index];
+
+        // Check if ALL materials in this section are now completed
+        let allDone = true;
+        for(let i = 0; i < totalItems; i++) {
+            if(!chProgress.materials[resourceKey][i]) {
+                allDone = false;
+                break;
+            }
+        }
+
+        // Sync with main task progress tracker
+        const taskId = resourceToTaskMap[resourceKey];
+        if (taskId) {
+            chProgress[taskId] = allDone;
+        }
+
+        saveProgress();
+        renderContent();
     }
 
     function resetData() {
@@ -316,14 +399,14 @@
                         <i data-lucide="trending-up" class="w-64 h-64 -mt-10 -mr-10"></i>
                     </div>
                     <div class="relative z-10">
-                        <h2 class="text-3xl font-bold mb-2">Welcome back! 👋</h2>
-                        <p class="text-indigo-100 text-lg max-w-2xl">The goal is simple: <strong>50+ Marks</strong> in both subjects. Focus on the chapters tagged as "Easy Win" first, then tackle the "Moderate" ones to secure your score.</p>
+                        <h2 class="text-3xl font-bold mb-2">Welcome back Shreeyu! 👋</h2>
+                        <p class="text-indigo-100 text-lg max-w-2xl">Focus on the chapters tagged as "Easy Win" first, then tackle the "Moderate" ones to secure your score.</p>
                     </div>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-6">
                     <!-- Biology Summary -->
-                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow cursor-pointer" onclick="switchTab('biology')">
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow cursor-pointer" onclick="switchTab('tracker-biology')">
                         <div class="flex justify-between items-start mb-6">
                             <div class="flex items-center gap-3">
                                 <div class="p-3 bg-green-100 rounded-xl text-green-600">
@@ -358,7 +441,7 @@
                     </div>
 
                     <!-- Chemistry Summary -->
-                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow cursor-pointer" onclick="switchTab('chemistry')">
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow cursor-pointer" onclick="switchTab('tracker-chemistry')">
                         <div class="flex justify-between items-start mb-6">
                             <div class="flex items-center gap-3">
                                 <div class="p-3 bg-blue-100 rounded-xl text-blue-600">
@@ -529,68 +612,158 @@
         return html;
     }
 
-    function renderMaterialsPage() {
+    function renderMaterialsPage(subject) {
+        const subjectTitle = subject.charAt(0).toUpperCase() + subject.slice(1);
+        const icon = subject === 'biology' ? 'microscope' : 'flask-conical';
+        const color = subject === 'biology' ? 'text-green-600' : 'text-blue-600';
+        const bgColor = subject === 'biology' ? 'bg-green-50' : 'bg-blue-50';
+
         let html = `
             <div class="max-w-5xl mx-auto space-y-8 pb-20 animate-fade-in">
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
                     <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-2 mb-2">
-                        <i data-lucide="book-open" class="w-6 h-6 text-primary"></i> Study Materials
+                        <div class="p-2 ${bgColor} rounded-lg"><i data-lucide="${icon}" class="w-6 h-6 ${color}"></i></div>
+                        ${subjectTitle} Materials
                     </h2>
-                    <p class="text-slate-500 text-sm">All your lecture links, notes, and PDFs mapped chapter by chapter.</p>
+                    <p class="text-slate-500 text-sm">All your lecture links, notes, and PDFs mapped chapter by chapter. Tick them off here to update your main progress!</p>
                 </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         `;
 
-        ['biology', 'chemistry'].forEach(subject => {
-            const subjectTitle = subject.charAt(0).toUpperCase() + subject.slice(1);
-            const icon = subject === 'biology' ? 'microscope' : 'flask-conical';
-            const color = subject === 'biology' ? 'text-green-600' : 'text-blue-600';
+        syllabus[subject].forEach(ch => {
+            const links = (RESOURCE_LINKS[subject] && RESOURCE_LINKS[subject][ch.id]) ? RESOURCE_LINKS[subject][ch.id] : {};
+            const style = getCategoryStyle(ch.category);
+
+            // Advanced Helper to render distinct sections for multiple items with checkboxes
+            const renderResourceSection = (subject, chapterId, resourceKey, sectionTitle, data, defaultLabel, iconStr, colorClass, legacyDuration = null) => {
+                // Empty state
+                if (!data || data === "" || (Array.isArray(data) && data.length === 0)) {
+                    return `
+                        <div class="flex flex-col gap-1.5">
+                            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider pl-1">${sectionTitle}</span>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                                <span class="flex items-center gap-1.5 text-[11px] font-medium px-2.5 py-1.5 rounded-lg bg-slate-50 text-slate-400 border border-slate-100 cursor-not-allowed opacity-60"><i data-lucide="${iconStr}" class="w-3.5 h-3.5 flex-shrink-0"></i> <span class="truncate">${defaultLabel}</span></span>
+                            </div>
+                        </div>`;
+                }
+
+                // Normalize to array of objects
+                let items = [];
+                if (Array.isArray(data)) {
+                    items = data.map((item, index) => {
+                        if (typeof item === 'string') return { url: item, title: `${defaultLabel} ${index + 1}`, duration: null };
+                        return { url: item.url, title: item.title || `${defaultLabel} ${index + 1}`, duration: item.duration || null };
+                    });
+                } else {
+                    items = [{ url: data, title: defaultLabel, duration: legacyDuration }];
+                }
+
+                // Generate HTML for all items with checkboxes
+                const itemsHtml = items.map((item, index) => {
+                    const durationEl = item.duration ? `<span class="ml-auto text-[9px] opacity-75 font-semibold bg-white/50 px-1.5 py-0.5 rounded">${item.duration}</span>` : '';
+
+                    // Check state
+                    const isChecked = userProgress[subject][chapterId].materials &&
+                        userProgress[subject][chapterId].materials[resourceKey] &&
+                        userProgress[subject][chapterId].materials[resourceKey][index];
+
+                    const baseStyle = isChecked ? 'bg-slate-50 border-slate-200 text-slate-500 opacity-80' : colorClass;
+                    const textStyle = isChecked ? 'line-through text-slate-400' : '';
+
+                    return `
+                        <div class="flex items-center gap-2 text-[11px] font-medium px-2 py-1.5 rounded-lg ${baseStyle} transition-colors border hover:shadow-sm">
+                            <input type="checkbox" class="w-3.5 h-3.5 rounded cursor-pointer accent-primary flex-shrink-0"
+                                ${isChecked ? 'checked' : ''}
+                                onchange="toggleMaterial('${subject}', ${chapterId}, '${resourceKey}', ${index}, ${items.length})">
+                            <a href="${item.url}" target="_blank" class="flex items-center gap-1.5 flex-1 min-w-0 ${textStyle}">
+                                <i data-lucide="${iconStr}" class="w-3.5 h-3.5 flex-shrink-0"></i>
+                                <span class="truncate">${item.title}</span>
+                                ${durationEl}
+                            </a>
+                        </div>`;
+                }).join('');
+
+                return `
+                    <div class="flex flex-col gap-1.5">
+                        <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider pl-1">${sectionTitle}</span>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            ${itemsHtml}
+                        </div>
+                    </div>`;
+            };
 
             html += `
-                <div class="mt-8">
-                    <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
-                        <i data-lucide="${icon}" class="w-5 h-5 ${color}"></i> ${subjectTitle}
-                    </h3>
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            `;
-
-            syllabus[subject].forEach(ch => {
-                const links = RESOURCE_LINKS[subject][ch.id];
-                const style = getCategoryStyle(ch.category);
-
-                // Helper to render buttons. Greyed out if no link exists.
-                const renderLink = (url, label, iconStr, colorClass) => {
-                    if (url) {
-                        return `<a href="${url}" target="_blank" class="flex items-center gap-2 text-xs font-medium px-3 py-2 rounded-lg ${colorClass} transition-colors border hover:shadow-sm"><i data-lucide="${iconStr}" class="w-3.5 h-3.5"></i> ${label}</a>`;
-                    } else {
-                        return `<span class="flex items-center gap-2 text-xs font-medium px-3 py-2 rounded-lg bg-slate-50 text-slate-400 border border-slate-100 cursor-not-allowed opacity-60"><i data-lucide="${iconStr}" class="w-3.5 h-3.5"></i> ${label}</span>`;
-                    }
-                };
-
-                html += `
                     <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col">
-                        <div class="flex justify-between items-start gap-2 mb-4 border-b border-slate-100 pb-2">
-                            <h4 class="font-bold text-slate-800 text-sm leading-tight">Ch ${ch.id}: ${ch.title}</h4>
-                            <span class="px-2 py-0.5 text-[10px] font-bold uppercase rounded flex-shrink-0 ${style.bg} ${style.text} border ${style.border}">
-                                ${style.label}
-                            </span>
-                        </div>
-                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-auto">
-                            ${renderLink(links.lecture, 'Lecture', 'monitor-play', 'bg-red-50 text-red-600 border-red-100 hover:bg-red-100')}
-                            ${renderLink(links.detailed_lecture, 'Detailed Lec', 'play-circle', 'bg-orange-50 text-orange-600 border-orange-100 hover:bg-orange-100')}
-                            ${renderLink(links.notes, 'Notes', 'book', 'bg-amber-50 text-amber-600 border-amber-100 hover:bg-amber-100')}
-                            ${renderLink(links.ncert_exercise, 'NCERT Qs', 'file-text', 'bg-blue-50 text-blue-600 border-blue-100 hover:bg-blue-100')}
-                            ${renderLink(links.practice_questions, 'Practice Qs', 'pen-tool', 'bg-indigo-50 text-indigo-600 border-indigo-100 hover:bg-indigo-100')}
-                            ${renderLink(links.master_pdf, 'Master PDF', 'star', 'bg-purple-50 text-purple-600 border-purple-100 hover:bg-purple-100')}
-                        </div>
+                    <div class="flex justify-between items-start gap-2 mb-4 border-b border-slate-100 pb-2">
+                        <h4 class="font-bold text-slate-800 text-sm leading-tight">Ch ${ch.id}: ${ch.title}</h4>
+                        <span class="px-2 py-0.5 text-[10px] font-bold uppercase rounded flex-shrink-0 ${style.bg} ${style.text} border ${style.border}">
+                            ${style.label}
+                        </span>
                     </div>
-                `;
-            });
-
-            html += `</div></div>`;
+                    <div class="flex flex-col gap-4 mt-auto">
+                        ${renderResourceSection(subject, ch.id, 'lecture', 'Lectures', links.lecture, 'Lecture', 'monitor-play', 'bg-red-50 text-red-600 border-red-100 hover:bg-red-100', links.lecture_duration)}
+                        ${renderResourceSection(subject, ch.id, 'detailed_lecture', 'Detailed Lectures', links.detailed_lecture, 'Detailed Lec', 'play-circle', 'bg-orange-50 text-orange-600 border-orange-100 hover:bg-orange-100', links.detailed_duration)}
+                        ${renderResourceSection(subject, ch.id, 'notes', 'Notes', links.notes, 'Notes', 'book', 'bg-amber-50 text-amber-600 border-amber-100 hover:bg-amber-100')}
+                        ${renderResourceSection(subject, ch.id, 'ncert_exercise', 'NCERT Qs', links.ncert_exercise, 'NCERT Qs', 'file-text', 'bg-blue-50 text-blue-600 border-blue-100 hover:bg-blue-100')}
+                        ${renderResourceSection(subject, ch.id, 'practice_questions', 'Practice Qs', links.practice_questions, 'Practice Qs', 'pen-tool', 'bg-indigo-50 text-indigo-600 border-indigo-100 hover:bg-indigo-100')}
+                        ${renderResourceSection(subject, ch.id, 'master_pdf', 'Master PDF', links.master_pdf, 'Master PDF', 'star', 'bg-purple-50 text-purple-600 border-purple-100 hover:bg-purple-100')}
+                    </div>
+                </div>
+            `;
         });
 
-        html += `</div>`;
+        html += `</div></div>`;
         return html;
+    }
+
+    function renderMockTestsPage() {
+        const now = new Date().getTime();
+        const distance = unlockDate - now;
+
+        // If the timer is up, show the unlocked state
+        if (distance <= 0) {
+            return `
+                <div class="max-w-4xl mx-auto space-y-8 animate-fade-in pb-20">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-green-200 bg-green-50/30">
+                        <h2 class="text-2xl font-bold text-slate-800 flex items-center gap-2 mb-2">
+                            <i data-lucide="unlock" class="w-6 h-6 text-green-600"></i> Mock Tests Unlocked!
+                        </h2>
+                        <p class="text-slate-600 text-sm">You've reached the final phase. Time to test your preparation.</p>
+                    </div>
+                    <div class="bg-white border border-slate-200 rounded-xl p-8 text-center shadow-sm">
+                        <p class="text-slate-500 italic">Mock test papers and solutions will be uploaded here soon.</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Locked state UI
+        return `
+            <div id="mock-locked-container" class="max-w-3xl mx-auto mt-12 md:mt-24 text-center animate-fade-in px-4">
+                <div class="w-24 h-24 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6 text-slate-400 border-4 border-white shadow-sm">
+                    <i data-lucide="lock" class="w-10 h-10"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-slate-800 mb-4">Mock Tests are Locked</h2>
+                <p class="text-slate-500 mb-10 max-w-md mx-auto">Focus on completing your syllabus, Quick Wins, and clearing backlogs first. The mock test series will automatically unlock in:</p>
+
+                <div class="flex items-center justify-center gap-3 md:gap-6 text-center">
+                    <div class="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 md:p-6 min-w-[80px] md:min-w-[100px]">
+                        <span id="countdown-days" class="text-3xl md:text-4xl font-bold text-primary block mb-1">14</span>
+                        <span class="text-[10px] md:text-xs text-slate-400 uppercase tracking-widest font-bold">Days</span>
+                    </div>
+                    <div class="text-2xl font-bold text-slate-300 pb-6">:</div>
+                    <div class="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 md:p-6 min-w-[80px] md:min-w-[100px]">
+                        <span id="countdown-hours" class="text-3xl md:text-4xl font-bold text-primary block mb-1">00</span>
+                        <span class="text-[10px] md:text-xs text-slate-400 uppercase tracking-widest font-bold">Hours</span>
+                    </div>
+                    <div class="text-2xl font-bold text-slate-300 pb-6">:</div>
+                    <div class="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 md:p-6 min-w-[80px] md:min-w-[100px]">
+                        <span id="countdown-mins" class="text-3xl md:text-4xl font-bold text-primary block mb-1">00</span>
+                        <span class="text-[10px] md:text-xs text-slate-400 uppercase tracking-widest font-bold">Mins</span>
+                    </div>
+                </div>
+            </div>
+        `;
     }
 
     function renderContent() {
@@ -598,18 +771,84 @@
 
         if (currentTab === 'dashboard') {
             container.innerHTML = renderDashboard();
-        } else if (currentTab === 'materials') {
-            container.innerHTML = renderMaterialsPage();
-        } else {
-            container.innerHTML = renderSubjectPage(currentTab);
+        } else if (currentTab.startsWith('tracker-')) {
+            const subject = currentTab.replace('tracker-', '');
+            container.innerHTML = renderSubjectPage(subject);
+        } else if (currentTab.startsWith('materials-')) {
+            const subject = currentTab.replace('materials-', '');
+            container.innerHTML = renderMaterialsPage(subject);
+        } else if (currentTab === 'mocktests') {
+            container.innerHTML = renderMockTestsPage();
         }
 
         // Re-initialize Lucide icons for dynamically injected content
         lucide.createIcons();
+        updateCountdown(); // Refresh timer immediately when switching tabs
     }
 
+    // --- TIMER LOGIC ---
+    let unlockDate = localStorage.getItem('mock_unlock_date');
+    if (!unlockDate) {
+        // Set to exactly 14 days from the very first time she opens the app
+        unlockDate = new Date().getTime() + (14 * 24 * 60 * 60 * 1000);
+        localStorage.setItem('mock_unlock_date', unlockDate);
+    }
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = unlockDate - now;
+
+        // Update sidebar badge
+        const sidebarBadge = document.getElementById('sidebar-timer-text');
+        if (sidebarBadge) {
+            if (distance > 0) {
+                const daysLeft = Math.ceil(distance / (1000 * 60 * 60 * 24));
+                sidebarBadge.innerText = `${daysLeft}d`;
+                sidebarBadge.parentElement.classList.replace('bg-green-100', 'bg-slate-100');
+                sidebarBadge.parentElement.classList.replace('text-green-600', 'text-slate-500');
+            } else {
+                sidebarBadge.innerText = 'Open';
+                sidebarBadge.parentElement.classList.replace('bg-slate-100', 'bg-green-100');
+                sidebarBadge.parentElement.classList.replace('text-slate-500', 'text-green-600');
+                sidebarBadge.previousElementSibling.setAttribute('data-lucide', 'unlock');
+                lucide.createIcons();
+            }
+        }
+
+        // Update the big countdown on the Mock Test page
+        const daysEl = document.getElementById('countdown-days');
+        if (daysEl && distance > 0) {
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+            daysEl.innerText = days.toString().padStart(2, '0');
+            document.getElementById('countdown-hours').innerText = hours.toString().padStart(2, '0');
+            document.getElementById('countdown-mins').innerText = minutes.toString().padStart(2, '0');
+        } else if (document.getElementById('mock-locked-container') && distance <= 0) {
+            // Auto-refresh the page content if the timer hits 0 while she is looking at it
+            if (currentTab === 'mocktests') renderContent();
+        }
+    }
+
+    // Keep the timer ticking every minute
+    setInterval(updateCountdown, 60000);
+
     // Initial Render
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', async () => {
+        try {
+            // Using standard relative fetch. Will work flawlessly on GitHub Pages.
+            const response = await fetch('links.json');
+
+            if (response.ok) {
+                RESOURCE_LINKS = await response.json();
+            } else {
+                console.warn("links.json could not be loaded. Please ensure it exists.");
+            }
+        } catch (error) {
+            console.warn("Notice: Fetching local links.json failed (normal behavior in IDE previews or file://). Once pushed to GitHub Pages, the links will load normally.", error);
+        }
+
         renderContent();
     });
 
