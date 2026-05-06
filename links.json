@@ -1,0 +1,38 @@
+{
+  "biology": {
+    "1": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
+    "2": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
+    "3": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
+    "4": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
+    "5": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
+    "6": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
+    "7": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
+    "8": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
+    "9": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
+    "10": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
+    "11": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
+    "12": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
+    "13": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" }
+  },
+
+  "chemistry": {
+    "1": { "lecture": "",
+      "lecture_duration": "",
+      "detailed_lecture": [{"url":"https://youtu.be/EVeaKUcfEV8?si=SsFfXWis-nD68oKu"  ,"title":"Munil Sir" ,"duration":"1hr 38min" },
+        {"url":"https://youtu.be/xw3C6_ZDDBo?si=RcuWDDVYh8tLvHQs"  ,"title":"Ashu Ghai" ,"duration":"3hr 14min" }],
+      "notes": "",
+      "ncert_exercise": "",
+      "practice_questions": "",
+      "master_pdf": "" },
+
+    "2": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
+    "3": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
+    "4": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
+    "5": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
+    "6": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
+    "7": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
+    "8": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
+    "9": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
+    "10": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" }
+  }
+}
