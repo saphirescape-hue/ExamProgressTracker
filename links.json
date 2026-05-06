@@ -16,16 +16,21 @@
   },
 
   "chemistry": {
-    "1": { "lecture": "",
-      "lecture_duration": "",
-      "detailed_lecture": [{"url":"https://youtu.be/EVeaKUcfEV8?si=SsFfXWis-nD68oKu"  ,"title":"Munil Sir" ,"duration":"1hr 38min" },
-        {"url":"https://youtu.be/xw3C6_ZDDBo?si=RcuWDDVYh8tLvHQs"  ,"title":"Ashu Ghai" ,"duration":"3hr 14min" }],
+    "1": { "lecture": [{"url":"https://youtu.be/EVeaKUcfEV8?si=SsFfXWis-nD68oKu"  ,"title":"Munil Sir" ,"duration":"1hr 38min (49min)" }],
+      "detailed_lecture": [{"url":"https://youtu.be/ahVOvaN1s-4?si=OTOb65alg0H3GLCa"  ,"title":"Munil Sir with questions" ,"duration":"6hr 34min (3hr 17min)"},
+        {"url":"https://youtu.be/xw3C6_ZDDBo?si=RcuWDDVYh8tLvHQs"  ,"title":"Ashu Ghai" ,"duration":"3hr 14min (1hr 37min)" }],
       "notes": "",
       "ncert_exercise": "",
       "practice_questions": "",
       "master_pdf": "" },
 
-    "2": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
+    "2": { "lecture": [{"url":"https://youtu.be/1aW2ZKLfdck?si=azw2VKKrT2Xgn5h0"  ,"title":"Munil Sir" ,"duration":"1hr 20min (40min)" }],
+      "detailed_lecture": [{"url":"https://youtu.be/PeyzKOjdsXc?si=_vL2Qx_zD3lxUYHX"  ,"title":"Munil Sir with questions","duration":"5hr 10min (2hr 35min)" }],
+      "notes": "",
+      "ncert_exercise": "",
+      "practice_questions": "",
+      "master_pdf": "" },
+
     "3": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
     "4": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
     "5": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
