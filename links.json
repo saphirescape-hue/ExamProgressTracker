@@ -1,6 +1,11 @@
 {
   "biology": {
-    "1": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
+    "1": { "lecture": [{"url":"https://youtu.be/lW8hbdNGhBE?si=O6zTlNfEpXheAdF6"  ,"title":"Ncert Wallah" ,"duration":"1hr 56min (58min)" }],
+      "detailed_lecture": [{"url":"https://www.youtube.com/live/bJyyUSEH_ao?si=31_HY8fEO-Hz0b0F"  ,"title":"Ncert Wallah" ,"duration":"3hr 28min (1hr 44min)"}],
+      "notes": "",
+      "ncert_exercise": "",
+      "practice_questions": "",
+      "master_pdf": "" },
     "2": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
     "3": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
     "4": { "lecture": "", "lecture_duration": "", "detailed_lecture": "", "detailed_duration": "", "notes": "", "ncert_exercise": "", "practice_questions": "", "master_pdf": "" },
