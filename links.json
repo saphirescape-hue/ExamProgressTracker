@@ -109,7 +109,7 @@
       "detailed_lecture": [{"url":"https://youtu.be/ahVOvaN1s-4?si=OTOb65alg0H3GLCa"  ,"title":"Munil Sir (IMP)" ,"duration":"6hr 34min (3hr 17min)"},
         {"url":"https://youtu.be/xw3C6_ZDDBo?si=RcuWDDVYh8tLvHQs"  ,"title":"Ashu Ghai" ,"duration":"3hr 14min (1hr 37min)" }],
       "notes": "",
-      "ncert_exercise": "",
+      "ncert_exercise": [{"url": "materials/chem/ncert/sol(1).pdf", "title":  "Ncert Solutions"}],
       "practice_questions": "",
       "master_pdf": "" },
 
@@ -117,7 +117,7 @@
       "detailed_lecture": [{"url":"https://youtu.be/PeyzKOjdsXc?si=_vL2Qx_zD3lxUYHX"  ,"title":"Munil Sir (IMP)","duration":"5hr 10min (2hr 35min)" },
         {"url":"https://youtu.be/nPQ-mvIl_bQ?si=FDaMWa64JwnhsWgT"  ,"title":"Ashu Ghai" ,"duration":"2hr 58min (1hr 29min)" }],
       "notes": "",
-      "ncert_exercise": "",
+      "ncert_exercise": [{"url": "materials/chem/ncert/sol(2).pdf", "title":  "Ncert Solutions"}],
       "practice_questions": "",
       "master_pdf": "" },
 
@@ -125,7 +125,7 @@
       "detailed_lecture": [{"url":"https://youtu.be/5L6GvAPOUvM?si=cZloSK3yphAy6Gow"  ,"title":"Munil Sir (IMP)" ,"duration":"4hr 19min (2hr 9min)"},
         {"url":"https://youtu.be/WuARVOxfRNQ?si=kOUQHjt0QcQhBMxm"  ,"title":"Ashu Ghai" ,"duration":"2hr 34min (1hr 17min)" }],
       "notes": "",
-      "ncert_exercise": "",
+      "ncert_exercise": [{"url": "materials/chem/ncert/sol(3).pdf", "title":  "Ncert Solutions"}],
       "practice_questions": "",
       "master_pdf": "" },
 
@@ -133,7 +133,7 @@
       "detailed_lecture": [{"url":"https://youtu.be/uTNCYQH5NpE?si=SFdoC9wfdz06yqRa"  ,"title":"Munil Sir (IMP)","duration":"4hr 4min (2hr 2min)" },
         {"url":"https://youtu.be/ZHdxNDnJf4o?si=bhgfreUMy6AV7FZD"  ,"title":"Ashu Ghai" ,"duration":"2hr 26min (1hr 13min)" }],
       "notes": "",
-      "ncert_exercise": "",
+      "ncert_exercise": [{"url": "materials/chem/ncert/sol(4).pdf", "title":  "Ncert Solutions"}],
       "practice_questions": "",
       "master_pdf": "" },
 
@@ -141,7 +141,7 @@
       "detailed_lecture": [{"url":"https://youtu.be/ysV5DjRB0y0?si=9TSoRMdDYChQavUp"  ,"title":"Munil Sir (IMP)" ,"duration":"3hr 13min (1hr 37min)"},
         {"url":"https://youtu.be/EszE3aP4yIM?si=7jqP3lf80RUpA3LO"  ,"title":"Ashu Ghai" ,"duration":"2hr 55min (1hr 28min)" }],
       "notes": "",
-      "ncert_exercise": "",
+      "ncert_exercise": [{"url": "materials/chem/ncert/sol(5).pdf", "title":  "Ncert Solutions"}],
       "practice_questions": "",
       "master_pdf": "" },
 
@@ -149,7 +149,7 @@
       "detailed_lecture": [{"url":"https://youtu.be/Eagd_CQ1mmM?si=xLeWwP6ZoH1kx1Un"  ,"title":"Munil Sir (IMP)","duration":"5hr 45min (2hr 53min)" },
         {"url":"https://youtu.be/CyC5v-5a1-4?si=7nXe4xv0nK6J0LHo"  ,"title":"Next Toppers" ,"duration":"2hr 57min (1hr 29min)" }],
       "notes": "",
-      "ncert_exercise": "",
+      "ncert_exercise": [{"url": "materials/chem/ncert/sol(6).pdf", "title":  "Ncert Solutions"}],
       "practice_questions": "",
       "master_pdf": "" },
 
@@ -157,7 +157,7 @@
       "detailed_lecture": [{"url":"https://youtu.be/-GeaZIcwh8M?si=qWRlQYBplnOx1SIT"  ,"title":"Munil Sir (IMP)" ,"duration":"5hr 42min (3hr 51min)"},
         {"url":"https://youtu.be/7yCbbjWrE6A?si=o2UZD1s7mdEXZbSr"  ,"title":"Next Toppers" ,"duration":"2hr 32min (1hr 16min)" }],
       "notes": "",
-      "ncert_exercise": "",
+      "ncert_exercise": [{"url": "materials/chem/ncert/sol(7).pdf", "title":  "Ncert Solutions"}],
       "practice_questions": "",
       "master_pdf": "" },
 
@@ -165,7 +165,7 @@
       "detailed_lecture": [{"url":"https://youtu.be/q0vMKq7sHc8?si=2pfP9_kEz7yIe1vm"  ,"title":"Munil Sir (IMP)","duration":"5hr 35min (2hr 47min)" },
         {"url":"https://youtu.be/tfM6-iEd6Ac?si=vYPSod8inOXaMw1k"  ,"title":"Next Toppers" ,"duration":"2hr 40min (1hr 20min)" }],
       "notes": "",
-      "ncert_exercise": "",
+      "ncert_exercise": [{"url": "materials/chem/ncert/sol(8).pdf", "title":  "Ncert Solutions"}],
       "practice_questions": "",
       "master_pdf": "" },
 
@@ -173,7 +173,7 @@
       "detailed_lecture": [{"url":"https://youtu.be/o-0gucjRuP8?si=IvkkAA8gw52qOm0o"  ,"title":"Munil Sir (IMP)" ,"duration":"2hr 24min (1hr 12min)"},
         {"url":"https://youtu.be/wc0_IIyLqTc?si=ed9nxgGADhuwYtyZ"  ,"title":"Next Toppers" ,"duration":"2hr 14min (1hr 7min)" }],
       "notes": "",
-      "ncert_exercise": "",
+      "ncert_exercise": [{"url": "materials/chem/ncert/sol(9).pdf", "title":  "Ncert Solutions"}],
       "practice_questions": "",
       "master_pdf": "" },
 
@@ -181,7 +181,7 @@
       "detailed_lecture": [{"url":"https://youtu.be/CNnqPoQQY0U?si=fCbQzUZOBOKRwr3L"  ,"title":"Munil Sir (IMP)","duration":"2hr 18min (1hr 9min)" },
         {"url":"https://youtu.be/qew8jac0z7g?si=Uz0Wj8MDs26wWJnH"  ,"title":"Next Toppers" ,"duration":"1hr 59min (1hr)" }],
       "notes": "",
-      "ncert_exercise": "",
+      "ncert_exercise": [{"url": "materials/chem/ncert/sol(10).pdf", "title":  "Ncert Solutions"}],
       "practice_questions": "",
       "master_pdf": "" }
   }
