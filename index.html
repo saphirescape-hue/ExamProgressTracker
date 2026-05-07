@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>You've Got This! | Study Tracker</title>
-    
+    <title>Shreeyu's Study Tracker</title>
+
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Lucide Icons for beautiful icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <script>
         tailwind.config = {
             theme: {
@@ -39,7 +39,7 @@
         .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
         .progress-bar-transition { transition: width 0.5s ease-in-out; }
         .tab-btn.active { background-color: #eef2ff; color: #4f46e5; border-right: 3px solid #4f46e5; font-weight: 600;}
-        
+
         /* Checkbox styling */
         .checkbox-wrapper-12 { position: relative; }
         .checkbox-wrapper-12 > svg { position: absolute; top: -130%; left: -170%; width: 110px; pointer-events: none; }
@@ -62,110 +62,110 @@
 </head>
 <body class="text-slate-800 antialiased h-screen flex overflow-hidden">
 
-    <!-- Mobile Sidebar Overlay -->
-    <div id="mobile-overlay" class="fixed inset-0 bg-gray-900 bg-opacity-50 z-40 hidden lg:hidden" onclick="toggleSidebar()"></div>
+<!-- Mobile Sidebar Overlay -->
+<div id="mobile-overlay" class="fixed inset-0 bg-gray-900 bg-opacity-50 z-40 hidden lg:hidden" onclick="toggleSidebar()"></div>
 
-    <!-- Sidebar Navigation -->
-    <aside id="sidebar" class="bg-white w-64 h-full border-r border-slate-200 flex flex-col absolute lg:relative z-50 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out">
-        <div class="p-6 border-b border-slate-100 flex justify-between items-center">
-            <div>
-                <h1 class="text-xl font-bold text-primary flex items-center gap-2">
-                    <i data-lucide="target" class="w-6 h-6"></i> You've Got This!
-                </h1>
-            </div>
-            <button class="lg:hidden text-slate-500" onclick="toggleSidebar()">
-                <i data-lucide="x" class="w-5 h-5"></i>
-            </button>
+<!-- Sidebar Navigation -->
+<aside id="sidebar" class="bg-white w-64 h-full border-r border-slate-200 flex flex-col absolute lg:relative z-50 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out">
+    <div class="p-6 border-b border-slate-100 flex justify-between items-center">
+        <div>
+            <h1 class="text-xl font-bold text-primary flex items-center gap-2">
+                <i data-lucide="target" class="w-6 h-6"></i> Shreeyu's Study Tracker
+            </h1>
         </div>
-        
-        <nav class="flex-1 py-4 overflow-y-auto custom-scrollbar">
-            <ul class="space-y-1">
-                <li>
-                    <button onclick="switchTab('dashboard')" id="nav-dashboard" class="tab-btn w-full flex items-center gap-3 px-6 py-3 text-left text-slate-600 hover:bg-slate-50 transition-colors active">
-                        <i data-lucide="layout-dashboard" class="w-5 h-5"></i> Dashboard
-                    </button>
-                </li>
-                
-                <!-- Syllabus Trackers Dropdown -->
-                <li>
-                    <button onclick="toggleNavGroup('group-trackers')" class="w-full flex items-center justify-between px-6 py-3 text-left text-slate-600 hover:bg-slate-50 transition-colors">
-                        <div class="flex items-center gap-3"><i data-lucide="list-todo" class="w-5 h-5"></i> Syllabus Trackers</div>
-                        <i data-lucide="chevron-down" id="icon-group-trackers" class="w-4 h-4 transition-transform duration-200"></i>
-                    </button>
-                    <ul id="group-trackers" class="hidden bg-slate-50/50 py-1 border-y border-slate-100">
-                        <li>
-                            <button onclick="switchTab('tracker-biology')" id="nav-tracker-biology" class="tab-btn w-full flex items-center gap-3 pl-14 pr-6 py-2.5 text-sm text-left text-slate-600 hover:bg-slate-100 transition-colors">
-                                <i data-lucide="microscope" class="w-4 h-4 text-green-500"></i> Biology
-                            </button>
-                        </li>
-                        <li>
-                            <button onclick="switchTab('tracker-chemistry')" id="nav-tracker-chemistry" class="tab-btn w-full flex items-center gap-3 pl-14 pr-6 py-2.5 text-sm text-left text-slate-600 hover:bg-slate-100 transition-colors">
-                                <i data-lucide="flask-conical" class="w-4 h-4 text-blue-500"></i> Chemistry
-                            </button>
-                        </li>
-                    </ul>
-                </li>
+        <button class="lg:hidden text-slate-500" onclick="toggleSidebar()">
+            <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+    </div>
 
-                <!-- Study Materials Dropdown -->
-                <li>
-                    <button onclick="toggleNavGroup('group-materials')" class="w-full flex items-center justify-between px-6 py-3 text-left text-slate-600 hover:bg-slate-50 transition-colors">
-                        <div class="flex items-center gap-3"><i data-lucide="book-open" class="w-5 h-5"></i> Study Materials</div>
-                        <i data-lucide="chevron-down" id="icon-group-materials" class="w-4 h-4 transition-transform duration-200"></i>
-                    </button>
-                    <ul id="group-materials" class="hidden bg-slate-50/50 py-1 border-y border-slate-100">
-                        <li>
-                            <button onclick="switchTab('materials-biology')" id="nav-materials-biology" class="tab-btn w-full flex items-center gap-3 pl-14 pr-6 py-2.5 text-sm text-left text-slate-600 hover:bg-slate-100 transition-colors">
-                                <i data-lucide="microscope" class="w-4 h-4 text-green-500"></i> Biology
-                            </button>
-                        </li>
-                        <li>
-                            <button onclick="switchTab('materials-chemistry')" id="nav-materials-chemistry" class="tab-btn w-full flex items-center gap-3 pl-14 pr-6 py-2.5 text-sm text-left text-slate-600 hover:bg-slate-100 transition-colors">
-                                <i data-lucide="flask-conical" class="w-4 h-4 text-blue-500"></i> Chemistry
-                            </button>
-                        </li>
-                    </ul>
-                </li>
-                
-                <li>
-                    <button onclick="switchTab('mocktests')" id="nav-mocktests" class="tab-btn w-full flex items-center justify-between px-6 py-3 text-left text-slate-500 hover:bg-slate-50 transition-colors">
-                        <span class="flex items-center gap-3"><i data-lucide="file-check" class="w-5 h-5"></i> Mock Tests</span>
-                        <div class="flex items-center gap-1 bg-slate-100 text-slate-500 px-2 py-0.5 rounded text-[10px] font-bold border border-slate-200">
-                            <i data-lucide="lock" class="w-3 h-3"></i> <span id="sidebar-timer-text">14d</span>
-                        </div>
-                    </button>
-                </li>
-            </ul>
-        </nav>
-        
-        <div class="p-6 border-t border-slate-100">
-            <button onclick="resetData()" class="w-full flex items-center justify-center gap-2 text-sm text-red-500 hover:text-red-700 hover:bg-red-50 py-2 rounded-md transition-colors">
-                <i data-lucide="refresh-cw" class="w-4 h-4"></i> Reset Progress
-            </button>
-        </div>
-    </aside>
+    <nav class="flex-1 py-4 overflow-y-auto custom-scrollbar">
+        <ul class="space-y-1">
+            <li>
+                <button onclick="switchTab('dashboard')" id="nav-dashboard" class="tab-btn w-full flex items-center gap-3 px-6 py-3 text-left text-slate-600 hover:bg-slate-50 transition-colors active">
+                    <i data-lucide="layout-dashboard" class="w-5 h-5"></i> Dashboard
+                </button>
+            </li>
 
-    <!-- Main Content Area -->
-    <main class="flex-1 flex flex-col h-full overflow-hidden relative">
-        <!-- Mobile Header -->
-        <header class="lg:hidden bg-white border-b border-slate-200 p-4 flex items-center gap-4 shadow-sm z-30">
-            <button onclick="toggleSidebar()" class="text-slate-600 p-1 hover:bg-slate-100 rounded-md">
-                <i data-lucide="menu" class="w-6 h-6"></i>
-            </button>
-            <h1 class="font-bold text-slate-800 text-lg">You've Got This!</h1>
-        </header>
+            <!-- Syllabus Trackers Dropdown -->
+            <li>
+                <button onclick="toggleNavGroup('group-trackers')" class="w-full flex items-center justify-between px-6 py-3 text-left text-slate-600 hover:bg-slate-50 transition-colors">
+                    <div class="flex items-center gap-3"><i data-lucide="list-todo" class="w-5 h-5"></i> Syllabus Trackers</div>
+                    <i data-lucide="chevron-down" id="icon-group-trackers" class="w-4 h-4 transition-transform duration-200"></i>
+                </button>
+                <ul id="group-trackers" class="hidden bg-slate-50/50 py-1 border-y border-slate-100">
+                    <li>
+                        <button onclick="switchTab('tracker-biology')" id="nav-tracker-biology" class="tab-btn w-full flex items-center gap-3 pl-14 pr-6 py-2.5 text-sm text-left text-slate-600 hover:bg-slate-100 transition-colors">
+                            <i data-lucide="microscope" class="w-4 h-4 text-green-500"></i> Biology
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="switchTab('tracker-chemistry')" id="nav-tracker-chemistry" class="tab-btn w-full flex items-center gap-3 pl-14 pr-6 py-2.5 text-sm text-left text-slate-600 hover:bg-slate-100 transition-colors">
+                            <i data-lucide="flask-conical" class="w-4 h-4 text-blue-500"></i> Chemistry
+                        </button>
+                    </li>
+                </ul>
+            </li>
 
-        <!-- Dynamic Content Container -->
-        <div id="content-container" class="flex-1 overflow-y-auto custom-scrollbar p-4 md:p-8">
-            <!-- Content gets injected here by JS -->
-        </div>
-    </main>
+            <!-- Study Materials Dropdown -->
+            <li>
+                <button onclick="toggleNavGroup('group-materials')" class="w-full flex items-center justify-between px-6 py-3 text-left text-slate-600 hover:bg-slate-50 transition-colors">
+                    <div class="flex items-center gap-3"><i data-lucide="book-open" class="w-5 h-5"></i> Study Materials</div>
+                    <i data-lucide="chevron-down" id="icon-group-materials" class="w-4 h-4 transition-transform duration-200"></i>
+                </button>
+                <ul id="group-materials" class="hidden bg-slate-50/50 py-1 border-y border-slate-100">
+                    <li>
+                        <button onclick="switchTab('materials-biology')" id="nav-materials-biology" class="tab-btn w-full flex items-center gap-3 pl-14 pr-6 py-2.5 text-sm text-left text-slate-600 hover:bg-slate-100 transition-colors">
+                            <i data-lucide="microscope" class="w-4 h-4 text-green-500"></i> Biology
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="switchTab('materials-chemistry')" id="nav-materials-chemistry" class="tab-btn w-full flex items-center gap-3 pl-14 pr-6 py-2.5 text-sm text-left text-slate-600 hover:bg-slate-100 transition-colors">
+                            <i data-lucide="flask-conical" class="w-4 h-4 text-blue-500"></i> Chemistry
+                        </button>
+                    </li>
+                </ul>
+            </li>
 
-    <!-- Hidden SVG for fancy checkboxes -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-      <symbol id="goo-12" viewBox="0 0 100 100">
+            <li>
+                <button onclick="switchTab('mocktests')" id="nav-mocktests" class="tab-btn w-full flex items-center justify-between px-6 py-3 text-left text-slate-500 hover:bg-slate-50 transition-colors">
+                    <span class="flex items-center gap-3"><i data-lucide="file-check" class="w-5 h-5"></i> Mock Tests</span>
+                    <div class="flex items-center gap-1 bg-slate-100 text-slate-500 px-2 py-0.5 rounded text-[10px] font-bold border border-slate-200">
+                        <i data-lucide="lock" class="w-3 h-3"></i> <span id="sidebar-timer-text">14d</span>
+                    </div>
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="p-6 border-t border-slate-100">
+        <button onclick="resetData()" class="w-full flex items-center justify-center gap-2 text-sm text-red-500 hover:text-red-700 hover:bg-red-50 py-2 rounded-md transition-colors">
+            <i data-lucide="refresh-cw" class="w-4 h-4"></i> Reset Progress
+        </button>
+    </div>
+</aside>
+
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col h-full overflow-hidden relative">
+    <!-- Mobile Header -->
+    <header class="lg:hidden bg-white border-b border-slate-200 p-4 flex items-center gap-4 shadow-sm z-30">
+        <button onclick="toggleSidebar()" class="text-slate-600 p-1 hover:bg-slate-100 rounded-md">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+        <h1 class="font-bold text-slate-800 text-lg">You've Got This!</h1>
+    </header>
+
+    <!-- Dynamic Content Container -->
+    <div id="content-container" class="flex-1 overflow-y-auto custom-scrollbar p-4 md:p-8">
+        <!-- Content gets injected here by JS -->
+    </div>
+</main>
+
+<!-- Hidden SVG for fancy checkboxes -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+    <symbol id="goo-12" viewBox="0 0 100 100">
         <path d="M50 50m-50 0a50 50 0 1 0 100 0a50 50 0 1 0 -100 0" />
-      </symbol>
-    </svg>
+    </symbol>
+</svg>
 
 <script>
     /* =======================================================================
@@ -224,11 +224,11 @@
        APP STATE & LOGIC
        ======================================================================= */
     let currentTab = 'dashboard';
-    
+
     // Initialize or load state from localStorage safely to prevent losing progress
     let savedProgress = JSON.parse(localStorage.getItem('study_tracker_data'));
     let userProgress = savedProgress || { biology: {}, chemistry: {} };
-    
+
     // Safely setup structure (This ensures updating the HTML never wipes her existing progress)
     ['biology', 'chemistry'].forEach(sub => {
         if (!userProgress[sub]) userProgress[sub] = {};
@@ -285,7 +285,7 @@
     /* =======================================================================
        UI RENDERING
        ======================================================================= */
-    
+
     function toggleSidebar() {
         const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('mobile-overlay');
@@ -300,12 +300,12 @@
 
     function switchTab(tab) {
         currentTab = tab;
-        
+
         // Update nav styling
         document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
         const activeBtn = document.getElementById(`nav-${tab}`);
         if(activeBtn) activeBtn.classList.add('active');
-        
+
         // Auto-open the parent dropdown menu if accessing a sub-page via Dashboard cards
         if (tab.startsWith('tracker-')) {
             document.getElementById('group-trackers').classList.remove('hidden');
@@ -317,20 +317,20 @@
 
         // Close sidebar on mobile after clicking tab
         if(window.innerWidth < 1024) { toggleSidebar(); }
-        
+
         renderContent();
     }
 
     function toggleTask(subject, chapterId, taskId) {
         let chProgress = userProgress[subject][chapterId];
         chProgress[taskId] = !chProgress[taskId];
-        
+
         // Automatically sync corresponding materials when main task is toggled
         const resourceKey = taskToResourceMap[taskId];
         if (resourceKey) {
             const links = (RESOURCE_LINKS[subject] && RESOURCE_LINKS[subject][chapterId]) ? RESOURCE_LINKS[subject][chapterId] : {};
             const data = links[resourceKey];
-            
+
             if (data && data !== "" && (!Array.isArray(data) || data.length > 0)) {
                 const totalItems = Array.isArray(data) ? data.length : 1;
                 if (!chProgress.materials[resourceKey]) chProgress.materials[resourceKey] = [];
@@ -347,10 +347,10 @@
     function toggleMaterial(subject, chapterId, resourceKey, index, totalItems) {
         let chProgress = userProgress[subject][chapterId];
         if (!chProgress.materials[resourceKey]) chProgress.materials[resourceKey] = [];
-        
+
         // Toggle specific material
         chProgress.materials[resourceKey][index] = !chProgress.materials[resourceKey][index];
-        
+
         // Check if ALL materials in this section are now completed
         let allDone = true;
         for(let i = 0; i < totalItems; i++) {
@@ -359,13 +359,13 @@
                 break;
             }
         }
-        
+
         // Sync with main task progress tracker
         const taskId = resourceToTaskMap[resourceKey];
         if (taskId) {
             chProgress[taskId] = allDone;
         }
-        
+
         saveProgress();
         renderContent();
     }
@@ -386,14 +386,14 @@
     function renderDashboard() {
         const bioMarks = calculateMarks('biology');
         const chemMarks = calculateMarks('chemistry');
-        
+
         // Calculate percentages
         const bioPercent = Math.min((bioMarks.earned / bioMarks.total) * 100, 100);
         const chemPercent = Math.min((chemMarks.earned / chemMarks.total) * 100, 100);
 
         return `
             <div class="max-w-5xl mx-auto space-y-8 animate-fade-in">
-                
+
                 <div class="bg-gradient-to-r from-primary to-indigo-600 rounded-2xl p-8 text-white shadow-lg relative overflow-hidden">
                     <div class="absolute right-0 top-0 opacity-10">
                         <i data-lucide="trending-up" class="w-64 h-64 -mt-10 -mr-10"></i>
@@ -421,7 +421,7 @@
                                 <span class="text-3xl font-bold text-slate-800">${bioMarks.earned}</span><span class="text-slate-500 text-lg"> / ${bioMarks.total}</span>
                             </div>
                         </div>
-                        
+
                         <div class="relative pt-1">
                             <div class="flex mb-2 items-center justify-between">
                                 <div><span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-green-600 bg-green-200">Progress</span></div>
@@ -456,7 +456,7 @@
                                 <span class="text-3xl font-bold text-slate-800">${chemMarks.earned}</span><span class="text-slate-500 text-lg"> / ${chemMarks.total}</span>
                             </div>
                         </div>
-                        
+
                         <div class="relative pt-1">
                             <div class="flex mb-2 items-center justify-between">
                                 <div><span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blue-600 bg-blue-200">Progress</span></div>
@@ -483,7 +483,7 @@
         const subjectTitle = subject.charAt(0).toUpperCase() + subject.slice(1);
         const data = syllabus[subject];
         const marks = calculateMarks(subject);
-        
+
         // Group chapters by category
         const easy = data.filter(c => c.category === 'easy');
         const moderate = data.filter(c => c.category === 'moderate');
@@ -517,7 +517,7 @@
 
     function renderChapterSection(subject, title, subtitle, chapters) {
         if (chapters.length === 0) return '';
-        
+
         let html = `
             <div class="mt-8 mb-4">
                 <h3 class="text-xl font-bold text-slate-800">${title}</h3>
@@ -528,7 +528,7 @@
 
         chapters.forEach(ch => {
             const style = getCategoryStyle(ch.category);
-            
+
             // Calculate progress for this chapter
             let checkedCount = 0;
             tasks.forEach(t => {
@@ -540,7 +540,7 @@
             html += `
                 <div class="bg-white rounded-xl shadow-sm border ${isComplete ? 'border-green-400 bg-green-50/30' : 'border-slate-200'} overflow-hidden transition-all duration-300">
                     <div class="p-5 flex flex-col lg:flex-row gap-6">
-                        
+
                         <!-- Left Info -->
                         <div class="lg:w-1/3 flex flex-col justify-between">
                             <div>
@@ -562,7 +562,7 @@
                                 <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Progress Tasks</span>
                                 <span class="text-xs font-bold ${isComplete ? 'text-green-600' : 'text-primary'}">${Math.round(pct)}%</span>
                             </div>
-                            
+
                             <!-- Progress Bar -->
                             <div class="w-full bg-slate-100 rounded-full h-1.5 mb-5">
                                 <div class="bg-primary h-1.5 rounded-full progress-bar-transition ${isComplete ? '!bg-green-500' : ''}" style="width: ${pct}%"></div>
@@ -571,9 +571,9 @@
                             <!-- Checkboxes Grid -->
                             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
                                 ${tasks.map(t => {
-                                    const isChecked = userProgress[subject][ch.id] && userProgress[subject][ch.id][t.id];
-                                    const inputId = `chk-${subject}-${ch.id}-${t.id}`;
-                                    return `
+                const isChecked = userProgress[subject][ch.id] && userProgress[subject][ch.id][t.id];
+                const inputId = `chk-${subject}-${ch.id}-${t.id}`;
+                return `
                                     <div class="flex items-center group">
                                         <div class="checkbox-wrapper-12 mr-3 flex-shrink-0">
                                             <div class="cbx">
@@ -600,7 +600,7 @@
                                         </label>
                                     </div>
                                     `;
-                                }).join('')}
+            }).join('')}
                             </div>
                         </div>
                     </div>
@@ -633,66 +633,66 @@
         syllabus[subject].forEach(ch => {
             const links = (RESOURCE_LINKS[subject] && RESOURCE_LINKS[subject][ch.id]) ? RESOURCE_LINKS[subject][ch.id] : {};
             const style = getCategoryStyle(ch.category);
-            
+
             // Advanced Helper to render distinct sections for multiple items with checkboxes
             const renderResourceSection = (subject, chapterId, resourceKey, sectionTitle, data, defaultLabel, iconStr, colorClass, legacyDuration = null) => {
-                    // Empty state
-                    if (!data || data === "" || (Array.isArray(data) && data.length === 0)) {
-                        return `
+                // Empty state
+                if (!data || data === "" || (Array.isArray(data) && data.length === 0)) {
+                    return `
                         <div class="flex flex-col gap-1.5">
                             <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider pl-1">${sectionTitle}</span>
                             <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
                                 <span class="flex items-center gap-1.5 text-[11px] font-medium px-2.5 py-1.5 rounded-lg bg-slate-50 text-slate-400 border border-slate-100 cursor-not-allowed opacity-60"><i data-lucide="${iconStr}" class="w-3.5 h-3.5 flex-shrink-0"></i> <span class="truncate">${defaultLabel}</span></span>
                             </div>
                         </div>`;
-                    }
+                }
 
-                    // Normalize to array of objects
-                    let items = [];
-                    if (Array.isArray(data)) {
-                        items = data.map((item, index) => {
-                            if (typeof item === 'string') return { url: item, title: `${defaultLabel} ${index + 1}`, duration: null };
-                            return { url: item.url, title: item.title || `${defaultLabel} ${index + 1}`, duration: item.duration || null };
-                        });
-                    } else {
-                        items = [{ url: data, title: defaultLabel, duration: legacyDuration }];
-                    }
+                // Normalize to array of objects
+                let items = [];
+                if (Array.isArray(data)) {
+                    items = data.map((item, index) => {
+                        if (typeof item === 'string') return { url: item, title: `${defaultLabel} ${index + 1}`, duration: null };
+                        return { url: item.url, title: item.title || `${defaultLabel} ${index + 1}`, duration: item.duration || null };
+                    });
+                } else {
+                    items = [{ url: data, title: defaultLabel, duration: legacyDuration }];
+                }
 
-                    // Generate HTML for all items with checkboxes
-                    const itemsHtml = items.map((item, index) => {
-                        const durationEl = item.duration ? `<span class="ml-auto text-[9px] opacity-75 font-semibold bg-white/50 px-1.5 py-0.5 rounded">${item.duration}</span>` : '';
-                        
-                        // Check state
-                        const isChecked = userProgress[subject][chapterId].materials && 
-                                          userProgress[subject][chapterId].materials[resourceKey] && 
-                                          userProgress[subject][chapterId].materials[resourceKey][index];
-                        
-                        const baseStyle = isChecked ? 'bg-slate-50 border-slate-200 text-slate-500 opacity-80' : colorClass;
-                        const textStyle = isChecked ? 'line-through text-slate-400' : '';
+                // Generate HTML for all items with checkboxes
+                const itemsHtml = items.map((item, index) => {
+                    const durationEl = item.duration ? `<span class="ml-auto text-[9px] opacity-75 font-semibold bg-white/50 px-1.5 py-0.5 rounded">${item.duration}</span>` : '';
 
-                        return `
+                    // Check state
+                    const isChecked = userProgress[subject][chapterId].materials &&
+                        userProgress[subject][chapterId].materials[resourceKey] &&
+                        userProgress[subject][chapterId].materials[resourceKey][index];
+
+                    const baseStyle = isChecked ? 'bg-slate-50 border-slate-200 text-slate-500 opacity-80' : colorClass;
+                    const textStyle = isChecked ? 'line-through text-slate-400' : '';
+
+                    return `
                         <div class="flex items-center gap-2 text-[11px] font-medium px-2 py-1.5 rounded-lg ${baseStyle} transition-colors border hover:shadow-sm">
-                            <input type="checkbox" class="w-3.5 h-3.5 rounded cursor-pointer accent-primary flex-shrink-0" 
-                                ${isChecked ? 'checked' : ''} 
+                            <input type="checkbox" class="w-3.5 h-3.5 rounded cursor-pointer accent-primary flex-shrink-0"
+                                ${isChecked ? 'checked' : ''}
                                 onchange="toggleMaterial('${subject}', ${chapterId}, '${resourceKey}', ${index}, ${items.length})">
                             <a href="${item.url}" target="_blank" class="flex items-center gap-1.5 flex-1 min-w-0 ${textStyle}">
-                                <i data-lucide="${iconStr}" class="w-3.5 h-3.5 flex-shrink-0"></i> 
-                                <span class="truncate">${item.title}</span> 
+                                <i data-lucide="${iconStr}" class="w-3.5 h-3.5 flex-shrink-0"></i>
+                                <span class="truncate">${item.title}</span>
                                 ${durationEl}
                             </a>
                         </div>`;
-                    }).join('');
+                }).join('');
 
-                    return `
+                return `
                     <div class="flex flex-col gap-1.5">
                         <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider pl-1">${sectionTitle}</span>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
                             ${itemsHtml}
                         </div>
                     </div>`;
-                };
+            };
 
-                html += `
+            html += `
                     <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow flex flex-col">
                     <div class="flex justify-between items-start gap-2 mb-4 border-b border-slate-100 pb-2">
                         <h4 class="font-bold text-slate-800 text-sm leading-tight">Ch ${ch.id}: ${ch.title}</h4>
@@ -745,7 +745,7 @@
                 </div>
                 <h2 class="text-3xl font-bold text-slate-800 mb-4">Mock Tests are Locked</h2>
                 <p class="text-slate-500 mb-10 max-w-md mx-auto">Focus on completing your syllabus, Quick Wins, and clearing backlogs first. The mock test series will automatically unlock in:</p>
-                
+
                 <div class="flex items-center justify-center gap-3 md:gap-6 text-center">
                     <div class="bg-white border border-slate-200 shadow-sm rounded-2xl p-4 md:p-6 min-w-[80px] md:min-w-[100px]">
                         <span id="countdown-days" class="text-3xl md:text-4xl font-bold text-primary block mb-1">14</span>
@@ -768,7 +768,7 @@
 
     function renderContent() {
         const container = document.getElementById('content-container');
-        
+
         if (currentTab === 'dashboard') {
             container.innerHTML = renderDashboard();
         } else if (currentTab.startsWith('tracker-')) {
@@ -780,7 +780,7 @@
         } else if (currentTab === 'mocktests') {
             container.innerHTML = renderMockTestsPage();
         }
-        
+
         // Re-initialize Lucide icons for dynamically injected content
         lucide.createIcons();
         updateCountdown(); // Refresh timer immediately when switching tabs
@@ -797,7 +797,7 @@
     function updateCountdown() {
         const now = new Date().getTime();
         const distance = unlockDate - now;
-        
+
         // Update sidebar badge
         const sidebarBadge = document.getElementById('sidebar-timer-text');
         if (sidebarBadge) {
@@ -830,7 +830,7 @@
             if (currentTab === 'mocktests') renderContent();
         }
     }
-    
+
     // Keep the timer ticking every minute
     setInterval(updateCountdown, 60000);
 
@@ -840,7 +840,7 @@
             // Using a cache-busting timestamp so mobile browsers never get stuck on old versions
             const timestamp = new Date().getTime();
             const response = await fetch(`links.json?v=${timestamp}`, { cache: 'no-store' });
-            
+
             if (response.ok) {
                 RESOURCE_LINKS = await response.json();
             } else {
@@ -849,7 +849,7 @@
         } catch (error) {
             console.warn("Notice: Fetching local links.json failed (normal behavior in IDE previews or file://). Once pushed to GitHub Pages, the links will load normally.", error);
         }
-        
+
         renderContent();
     });
 
