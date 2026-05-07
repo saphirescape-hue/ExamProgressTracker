@@ -108,7 +108,7 @@
     "1": { "lecture": [{"url":"https://youtu.be/EVeaKUcfEV8?si=SsFfXWis-nD68oKu"  ,"title":"Munil Sir" ,"duration":"1hr 38min (49min)" }],
       "detailed_lecture": [{"url":"https://youtu.be/ahVOvaN1s-4?si=OTOb65alg0H3GLCa"  ,"title":"Munil Sir (IMP)" ,"duration":"6hr 34min (3hr 17min)"},
         {"url":"https://youtu.be/xw3C6_ZDDBo?si=RcuWDDVYh8tLvHQs"  ,"title":"Ashu Ghai" ,"duration":"3hr 14min (1hr 37min)" }],
-      "notes": "",
+      "notes": [{"url": "materials/chem/notes/Guide(1).pdf", "title":  "Guide"}],
       "ncert_exercise": [{"url": "materials/chem/ncert/sol(1).pdf", "title":  "Ncert Solutions"}],
       "practice_questions": "",
       "master_pdf": "" },
