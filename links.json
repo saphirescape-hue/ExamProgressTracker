@@ -52,7 +52,7 @@
       "detailed_lecture": [{"url":"https://www.youtube.com/live/F8TPIH30tAQ?si=ayy4pzNM56VaXh7I"  ,"title":"Ncert Wallah" ,"duration":"3hr 27min (1hr 44min)"}],
       "notes": [{"url": "materials/nio/notes/Guide(7).pdf", "title":  "Guide"}],
       "ncert_exercise": [{"url": "materials/bio/ncert/sol(7).pdf", "title":  "Ncert Solutions"}],
-      "practice_questions": "",
+      "practice_questions": [{"url": "materials/bio/prac_q/Practice-1(7).pdf", "title":  "Practice - 50 Que"}],
       "master_pdf": "" },
 
     "8": { "lecture": [{"url":"https://youtu.be/ka_rvqVnlNo?si=5MkhzdZKaKsH_UOP"  ,"title":"Ncert Wallah" ,"duration":"1hr (30min)"},
