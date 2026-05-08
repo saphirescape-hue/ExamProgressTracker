@@ -60,7 +60,7 @@
       "detailed_lecture": [{"url":"https://www.youtube.com/live/Z0P6lgBxEY8?si=uC4yDouKTLt9JWNT"  ,"title":"Ncert Wallah" ,"duration":"1hr 34min (47min)"}],
       "notes": [{"url": "materials/bio/notes/Guide(8).pdf", "title":  "Guide"}],
       "ncert_exercise": [{"url": "materials/bio/ncert/sol(8).pdf", "title":  "Ncert Solutions"}],
-      "practice_questions": "",
+      "practice_questions": [{"url": "materials/bio/prac_q/Practice-1(8).pdf", "title":  "Practice - 50 Que"}],
       "master_pdf": "" },
 
     "9": { "lecture": [{"url":"https://youtu.be/pumZiybEwdE?si=nm7yA17wGj29CjLU"  ,"title":"Ncert Wallah" ,"duration":"1hr 31min (46min)" },
@@ -68,7 +68,7 @@
       "detailed_lecture": [{"url":"https://www.youtube.com/live/9Vkj16S_30A?si=oy1t8fAlbXCU69lB"  ,"title":"Ncert Wallah" ,"duration":"2hr 20min (1hr 10min)"}],
       "notes": [{"url": "materials/bio/notes/Guide(9).pdf", "title":  "Guide"}],
       "ncert_exercise": [{"url": "materials/bio/ncert/sol(9).pdf", "title":  "Ncert Solutions"}],
-      "practice_questions": "",
+      "practice_questions": [{"url": "materials/bio/prac_q/Practice-1(9).pdf", "title":  "Practice - 50 Que"}],
       "master_pdf": "" },
 
     "10": { "lecture": [{"url":"https://youtu.be/530GYX9C1vU?si=MS_ReyaLKGleociK"  ,"title":"Ncert Wallah" ,"duration":"1hr 7min (36min)" },
@@ -76,7 +76,7 @@
       "detailed_lecture": [{"url":"https://www.youtube.com/live/ZVEEGaM7Hp0?si=Ro8YIgcoJGcv2Lx5"  ,"title":"Ncert Wallah" ,"duration":"1hr 36min (48min)"}],
       "notes": [{"url": "materials/bio/notes/Guide(10).pdf", "title":  "Guide"}],
       "ncert_exercise": [{"url": "materials/bio/ncert/sol(10).pdf", "title":  "Ncert Solutions"}],
-      "practice_questions": "",
+      "practice_questions": [{"url": "materials/bio/prac_q/Practice-1(10).pdf", "title":  "Practice - 50 Que"}],
       "master_pdf": "" },
 
     "11": { "lecture": [{"url":"https://youtu.be/k2XIpxQgSHo?si=ozQdbPZkfg7CscJG"  ,"title":"Ncert Wallah" ,"duration":"1hr 18min (39min)" },
@@ -84,7 +84,7 @@
       "detailed_lecture": [{"url":"https://www.youtube.com/live/umdgi6r1sq4?si=D-LEBIUo9hf8oYws"  ,"title":"Ncert Wallah" ,"duration":"2hr 8min (1hr 4min)"}],
       "notes": [{"url": "materials/bio/notes/Guide(11).pdf", "title":  "Guide"}],
       "ncert_exercise": [{"url": "materials/bio/ncert/sol(11).pdf", "title":  "Ncert Solutions"}],
-      "practice_questions": "",
+      "practice_questions": [{"url": "materials/bio/prac_q/Practice-1(11).pdf", "title":  "Practice - 50 Que"}],
       "master_pdf": "" },
 
     "12": { "lecture": [{"url":"https://youtu.be/042LD-Xnt3A?si=jeiMcbCCyZOjdJV5"  ,"title":"Ncert Wallah" ,"duration":"48min (24min)" },
@@ -92,7 +92,7 @@
       "detailed_lecture": [{"url":"https://www.youtube.com/live/ia7IEW1FQ50?si=m6Z-ZbwSmuhTEn5u"  ,"title":"Ncert Wallah" ,"duration":"1hr 20min (40min)"}],
       "notes": [{"url": "materials/bio/notes/Guide(12).pdf", "title":  "Guide"}],
       "ncert_exercise": [{"url": "materials/bio/ncert/sol(12).pdf", "title":  "Ncert Solutions"}],
-      "practice_questions": "",
+      "practice_questions": [{"url": "materials/bio/prac_q/Practice-1(12).pdf", "title":  "Practice - 50 Que"}],
       "master_pdf": "" },
 
     "13": { "lecture": [{"url":"https://youtu.be/XLRxoLcyhuw?si=DJGnMGOTpz5pWTJg"  ,"title":"Ncert Wallah" ,"duration":"58min (29min)" },
@@ -100,7 +100,7 @@
       "detailed_lecture": [{"url":"https://www.youtube.com/live/bOFLd6EZy4g?si=taRjfuxdRuyZl9FV"  ,"title":"Ncert Wallah" ,"duration":"1hr 42min (51min)"}],
       "notes": [{"url": "materials/bio/notes/Guide(13).pdf", "title":  "Guide"}],
       "ncert_exercise": [{"url": "materials/bio/ncert/sol(13).pdf", "title":  "Ncert Solutions"}],
-      "practice_questions": "",
+      "practice_questions": [{"url": "materials/bio/prac_q/Practice-1(13).pdf", "title":  "Practice - 50 Que"}],
       "master_pdf": "" }
   },
 
@@ -110,7 +110,7 @@
         {"url":"https://youtu.be/xw3C6_ZDDBo?si=RcuWDDVYh8tLvHQs"  ,"title":"Ashu Ghai" ,"duration":"3hr 14min (1hr 37min)" }],
       "notes": [{"url": "materials/chem/notes/Guide(1).pdf", "title":  "Guide"}],
       "ncert_exercise": [{"url": "materials/chem/ncert/sol(1).pdf", "title":  "Ncert Solutions"}],
-      "practice_questions": "",
+      "practice_questions": [{"url": "materials/chem/prac_q/Practice-1(1).pdf", "title":  "Practice - 50 Que"}],
       "master_pdf": "" },
 
     "2": { "lecture": [{"url":"https://youtu.be/1aW2ZKLfdck?si=azw2VKKrT2Xgn5h0"  ,"title":"Munil Sir" ,"duration":"1hr 20min (40min)" }],
@@ -118,7 +118,7 @@
         {"url":"https://youtu.be/nPQ-mvIl_bQ?si=FDaMWa64JwnhsWgT"  ,"title":"Ashu Ghai" ,"duration":"2hr 58min (1hr 29min)" }],
       "notes": [{"url": "materials/chem/notes/Guide(2).pdf", "title":  "Guide"}],
       "ncert_exercise": [{"url": "materials/chem/ncert/sol(2).pdf", "title":  "Ncert Solutions"}],
-      "practice_questions": "",
+      "practice_questions": [{"url": "materials/chem/prac_q/Practice-1(2).pdf", "title":  "Practice - 50 Que"}],
       "master_pdf": "" },
 
     "3": { "lecture": [{"url":"https://youtu.be/sc95oa5bMlY?si=D2xdcS4W0euBg9J-"  ,"title":"Munil Sir" ,"duration":"1hr 12min (36min)" }],
@@ -126,7 +126,7 @@
         {"url":"https://youtu.be/WuARVOxfRNQ?si=kOUQHjt0QcQhBMxm"  ,"title":"Ashu Ghai" ,"duration":"2hr 34min (1hr 17min)" }],
       "notes": [{"url": "materials/chem/notes/Guide(3).pdf", "title":  "Guide"}],
       "ncert_exercise": [{"url": "materials/chem/ncert/sol(3).pdf", "title":  "Ncert Solutions"}],
-      "practice_questions": "",
+      "practice_questions": [{"url": "materials/chem/prac_q/Practice-1(3).pdf", "title":  "Practice - 50 Que"}],
       "master_pdf": "" },
 
     "4": { "lecture": [{"url":"https://youtu.be/PEhFZ8-hUU4?si=rPAQMSgxP1qWBNhR"  ,"title":"Munil Sir" ,"duration":"1hr (30min)" }],
@@ -134,7 +134,7 @@
         {"url":"https://youtu.be/ZHdxNDnJf4o?si=bhgfreUMy6AV7FZD"  ,"title":"Ashu Ghai" ,"duration":"2hr 26min (1hr 13min)" }],
       "notes": [{"url": "materials/chem/notes/Guide(4).pdf", "title":  "Guide"}],
       "ncert_exercise": [{"url": "materials/chem/ncert/sol(4).pdf", "title":  "Ncert Solutions"}],
-      "practice_questions": "",
+      "practice_questions": [{"url": "materials/chem/prac_q/Practice-1(4).pdf", "title":  "Practice - 50 Que"}],
       "master_pdf": "" },
 
     "5": { "lecture": [{"url":"https://youtu.be/Z7D_vOt0_JU?si=oPgvYBAQaIZJ3XGw"  ,"title":"Munil Sir" ,"duration":"59min (30min)" }],
@@ -142,7 +142,7 @@
         {"url":"https://youtu.be/EszE3aP4yIM?si=7jqP3lf80RUpA3LO"  ,"title":"Ashu Ghai" ,"duration":"2hr 55min (1hr 28min)" }],
       "notes": [{"url": "materials/chem/notes/Guide(5).pdf", "title":  "Guide"}],
       "ncert_exercise": [{"url": "materials/chem/ncert/sol(5).pdf", "title":  "Ncert Solutions"}],
-      "practice_questions": "",
+      "practice_questions": [{"url": "materials/chem/prac_q/Practice-1(5).pdf", "title":  "Practice - 50 Que"}],
       "master_pdf": "" },
 
     "6": { "lecture": [{"url":"https://youtu.be/jwCm1W8al24?si=7QexZ4LLjIbjTqde"  ,"title":"Munil Sir" ,"duration":"59min (30min)" }],
@@ -150,7 +150,7 @@
         {"url":"https://youtu.be/CyC5v-5a1-4?si=7nXe4xv0nK6J0LHo"  ,"title":"Next Toppers" ,"duration":"2hr 57min (1hr 29min)" }],
       "notes": [{"url": "materials/chem/notes/Guide(6).pdf", "title":  "Guide"}],
       "ncert_exercise": [{"url": "materials/chem/ncert/sol(6).pdf", "title":  "Ncert Solutions"}],
-      "practice_questions": "",
+      "practice_questions": [{"url": "materials/chem/prac_q/Practice-1(6).pdf", "title":  "Practice - 50 Que"}],
       "master_pdf": "" },
 
     "7": { "lecture": [{"url":"https://youtu.be/cIGEwKU3cF8?si=0mnXcJmKrnziJeTN"  ,"title":"Munil Sir" ,"duration":"1hr 5min (33min)" }],
@@ -158,7 +158,7 @@
         {"url":"https://youtu.be/7yCbbjWrE6A?si=o2UZD1s7mdEXZbSr"  ,"title":"Next Toppers" ,"duration":"2hr 32min (1hr 16min)" }],
       "notes": [{"url": "materials/chem/notes/Guide(7).pdf", "title":  "Guide"}],
       "ncert_exercise": [{"url": "materials/chem/ncert/sol(7).pdf", "title":  "Ncert Solutions"}],
-      "practice_questions": "",
+      "practice_questions": [{"url": "materials/chem/prac_q/Practice-1(7).pdf", "title":  "Practice - 50 Que"}],
       "master_pdf": "" },
 
     "8": { "lecture": [{"url":"https://youtu.be/PGa7MTpaIYA?si=c4KBhUnGhsn0LDND"  ,"title":"Munil Sir" ,"duration":"1hr 11min (36min)" }],
@@ -166,7 +166,7 @@
         {"url":"https://youtu.be/tfM6-iEd6Ac?si=vYPSod8inOXaMw1k"  ,"title":"Next Toppers" ,"duration":"2hr 40min (1hr 20min)" }],
       "notes": [{"url": "materials/chem/notes/Guide(8).pdf", "title":  "Guide"}],
       "ncert_exercise": [{"url": "materials/chem/ncert/sol(8).pdf", "title":  "Ncert Solutions"}],
-      "practice_questions": "",
+      "practice_questions": [{"url": "materials/chem/prac_q/Practice-1(8).pdf", "title":  "Practice - 50 Que"}],
       "master_pdf": "" },
 
     "9": { "lecture": [{"url":"https://youtu.be/WKXvHnFIpZw?si=pv_oQ_PZS8En1s0p"  ,"title":"Munil Sir" ,"duration":"50min (25min)" }],
@@ -174,7 +174,7 @@
         {"url":"https://youtu.be/wc0_IIyLqTc?si=ed9nxgGADhuwYtyZ"  ,"title":"Next Toppers" ,"duration":"2hr 14min (1hr 7min)" }],
       "notes": [{"url": "materials/chem/notes/Guide(9).pdf", "title":  "Guide"}],
       "ncert_exercise": [{"url": "materials/chem/ncert/sol(9).pdf", "title":  "Ncert Solutions"}],
-      "practice_questions": "",
+      "practice_questions": [{"url": "materials/chem/prac_q/Practice-1(9).pdf", "title":  "Practice - 50 Que"}],
       "master_pdf": "" },
 
     "10": { "lecture": [{"url":"https://youtu.be/1XDRP9b5O08?si=xdbnSumwnNuHjAKh"  ,"title":"Munil Sir" ,"duration":"1hr 14min (37min)" }],
@@ -182,7 +182,7 @@
         {"url":"https://youtu.be/qew8jac0z7g?si=Uz0Wj8MDs26wWJnH"  ,"title":"Next Toppers" ,"duration":"1hr 59min (1hr)" }],
       "notes": [{"url": "materials/chem/notes/Guide(10).pdf", "title":  "Guide"}],
       "ncert_exercise": [{"url": "materials/chem/ncert/sol(10).pdf", "title":  "Ncert Solutions"}],
-      "practice_questions": "",
+      "practice_questions": [{"url": "materials/chem/prac_q/Practice-1(10).pdf", "title":  "Practice - 50 Que"}],
       "master_pdf": "" }
   }
 }
